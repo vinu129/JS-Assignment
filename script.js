@@ -157,3 +157,25 @@ function smallestElem(k) {
     arr.sort();
     console.log("smallest element is:" + arr[k - 1]);
 }
+
+// Find trailing zeros in factorial of given number //
+
+function trailingZeros(n) {
+    let fact = 1;
+    let count = 0;
+    let b;
+    while (n > 1) {
+        fact = fact * n * (n - 1);
+        n = n - 2;
+    }
+    console.log("Factorial of num is:" + fact);
+    while (fact > 0) {
+        b = fact % 10
+        if (b == 0) {
+            count++;
+        }
+        fact = (fact / 10);
+    }
+    console.log("Number of zeros : " + count);
+
+}
