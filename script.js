@@ -149,3 +149,11 @@ function evenNumFirst() {
     ans = even.concat(odd);
     console.log("Rearrange Array : " + ans);
 }
+
+// Find kth Smallest  element from Unsorted Array
+
+function smallestElem(k) {
+    let arr = [2, 45, 33, 21, 1, 0, 32, 78];
+    arr.sort();
+    console.log("smallest element is:" + arr[k - 1]);
+}
