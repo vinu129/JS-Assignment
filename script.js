@@ -93,3 +93,17 @@ function reverseString(str) {
 // let b = [2,3,7,8,4];
 
 // console.log(longestCommonSubsequence(a,b));
+
+// First Non repeating char in string //
+
+function firstNonRepeatedChar(string) {
+    for (var i = 0; i < string.length; i++) {
+        var val = string.charAt(i);
+        if (string.indexOf(val) == i && string.indexOf(val, i + 1) == -1) {
+            console.log("Given string is : " + string);
+            console.log("First Non-Repating Char in string is :" + val);
+            return val;
+        }
+    }
+    return null;
+}
