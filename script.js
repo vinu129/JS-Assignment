@@ -42,3 +42,33 @@ function sortByName() {
 }
 
 
+// ------- Reverse string using split and reverse function --------//
+
+function reverseFun(str) {
+
+    var splitString = str.split("");  // ["h", "e", "l", "l", "o"]
+    var reverseArray = splitString.reverse(); // ["o", "l", "l", "e", "h"]
+    var joinArray = reverseArray.join(""); // "olleh"
+
+    return joinArray; // "olleh"
+}
+
+reverseFun("hello");
+
+/* Chaining the three methods together: */
+function reverseFun1(str) {
+    return str.split("").reverse().join("");
+}
+reverseFun1("hello");
+
+// ------- Reverse string WITHOUT using split and reverse function --------//
+
+function reverseString(str) {
+    console.log("Original String :" + str);
+    var newString = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    console.log("Reversed String :" + newString);
+    return newString;
+}
