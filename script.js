@@ -126,3 +126,26 @@ function findMissingConsecutiveNum() {
         }
     }
 }
+
+// All Even Number should come first , then Odd number form Given integer
+
+function evenNumFirst() {
+    arr = [-2, 10, -17, 9, 24, 25, -99, 15, -16, 8];
+    let odd = new Array();
+    let even = new Array();
+    let n = 0;
+    console.log("Given Array:" + arr);
+    while (n < arr.length) {
+        if (arr[n] % 2 == 0) {
+            even.push(arr[n]);
+            n++;
+        }
+        else {
+            odd.push(arr[n]);
+            n++;
+        }
+    }
+    let ans = new Array();
+    ans = even.concat(odd);
+    console.log("Rearrange Array : " + ans);
+}
