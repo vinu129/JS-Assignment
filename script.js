@@ -107,3 +107,22 @@ function firstNonRepeatedChar(string) {
     }
     return null;
 }
+
+// Find the missing consecutive element form the given range
+
+function findMissingConsecutiveNum() {
+    arr = [-4, -3, -2, 0, 1, 2];
+    let n = 0;
+    let answer;
+    console.log("Given Array:" + arr);
+    while (n < arr.length) {
+        if (arr[n + 1] - arr[n] == 1) {
+            n++;
+        }
+        else {
+            answer = arr[n] + 1;
+            console.log("Missing Value is :" + answer);
+            n = arr.length;
+        }
+    }
+}
